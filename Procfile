@@ -1,2 +1,2 @@
-web:gunicorn Timathon.wsgi
+web: gunicorn Timathon.wsgi
 
