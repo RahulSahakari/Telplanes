@@ -1,6 +1,5 @@
 from django import forms
 import datetime
-from multiselectfield import MultiSelectField
 
 class HotelsSearchForm(forms.Form):
 	adults = forms.IntegerField(initial = 1, required = True, widget=forms.NumberInput(attrs = {
