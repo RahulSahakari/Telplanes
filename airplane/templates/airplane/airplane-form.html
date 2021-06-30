@@ -1,0 +1,22 @@
+{%extends 'airplane/base.html'%}
+
+{% load crispy_forms_tags%}
+
+{% block content %}
+	<div class="form-div center-v-h">
+		<form method="POST">
+			{% csrf_token %}
+			<fieldset>
+				<legend>Track Airplanes</legend>
+				<div>
+					{{form|crispy}}
+				</div>
+				<div class="">
+					<input class = "btn custom-outline-btn mt-3" type="submit" name="">
+				</div>
+			</fieldset>
+		</form>
+	</div>
+{% endblock %}
+
+

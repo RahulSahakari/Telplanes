@@ -1,0 +1,42 @@
+{%extends 'airplane/base.html'%}
+
+{% block content %}
+	
+	<div class="" tabindex="-1">
+	  	<div class="modal-dialog flight-details">
+	  		<div class="custom-modal-content">
+		  		<div class="modal-header custom-modal-header">
+					<h1 class="modal-title ml-4">{{flight_status}}</h1>
+				</div>	  			
+	  		</div>
+
+	    	<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title">Departure Details</h1>
+				</div>
+					<div class="modal-body">
+						<h3>Airport: {{departure_airport}} Airport</h3>
+						<h3>Scheduled Time: {{departure_scheduled}}</h3>
+						<h3>Estimated Time: {{departure_estimated}}</h3>
+						<h3>Actual Time: {{departure_actual}}</h3>
+						<h3>Terminal: {{departure_terminal}}</h3>
+					</div>
+		    	</div>
+		    	<div class="modal-content">
+		    		<div class="modal-header">
+						<h1 class="modal-title">Arrival Details</h1>
+					</div>
+					<div>
+						<div class="modal-body">
+							<h3>Airport: {{arrival_airport}} Airport</h3>
+							<h3>Scheduled Time: {{arrival_scheduled}}</h3>
+							<h3>Estimated Time: {{arrival_estimated}}</h3>
+							<h3>Actual Time: {{arrival_actual}}</h3>
+							<h3>Terminal: {{arrival_terminal}}</h3>
+						</div>
+					</div>
+		    	</div>
+		    </div>
+	  	</div>
+	</div>
+{% endblock %}

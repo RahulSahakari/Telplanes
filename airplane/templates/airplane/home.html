@@ -1,0 +1,11 @@
+{% extends 'airplane/base.html' %}
+{% load static %}
+
+{% block content %}
+	<div class="home-content">
+		<h1 class="home-title">Explore the world</h1>
+		<a class="home-btn btn custom-btn" href="{%url 'airplane' %}">Airplane</a>
+		<a href="{% url 'hotels' %}" class="home-btn btn custom-outline-btn">Hotels</a>
+	</div>
+
+{% endblock %}

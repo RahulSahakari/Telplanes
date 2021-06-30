@@ -1,0 +1,28 @@
+{%extends 'airplane/base.html'%}
+
+{% block content %}
+	<div class="hotel-data">
+		{% for i in results %}
+			<div class="card" style="width: 18rem;">
+				<img src="{{i.image}}" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">{{i.name}}</h5>
+					<p class="card-text">{{i.address}}</p>
+					<!-- <h4>Reviews <strong>{{i.guest_rating}}</strong></h4>
+					<h4>Hotel Stars <strong>{{i.star_rating}}</strong></h4> -->
+					<hr>
+					<h3 class="">{{i.price}}</h3>
+					<!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+		
+		<!-- <h1>Name: {{i.name}}</h1>
+		<h3>Price: {{i.price}}</h3>
+		<p>Address: {{i.address}}</p>
+		<strong>Reviews: {{i.guest_rating}}</strong>
+		<strong>Hotel Stars: {{i.star_rating}}</strong>
+		<hr> -->
+	
+{% endblock %}

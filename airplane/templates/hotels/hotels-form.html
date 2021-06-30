@@ -1,0 +1,31 @@
+{%extends 'airplane/base.html'%}
+
+{% load crispy_forms_tags%}
+
+{% block content %}
+	<div class="form-div h-f">
+		<form method="POST">
+			{% csrf_token %}
+			<fieldset>
+				<legend class="">Find Hotels</legend>
+				<div class="">
+					{{form|crispy}}
+				</div>
+
+				<legend class="border-bottom mb-4">Filter Hotels</legend>
+				<div>
+					{{f_form|crispy}}
+				</div>
+
+				<legend class="border-bottom mb-4">Sort Order</legend>
+				<div>
+					{{s_form|crispy}}
+				</div>
+
+				<div class="footer-copyright">
+					<input class = "btn custom-outline-btn mt-3" type="submit" name="">
+				</div>
+			</fieldset>
+		</form>
+	</div>
+{% endblock %}
