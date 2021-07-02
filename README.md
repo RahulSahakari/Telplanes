@@ -2,7 +2,7 @@
 
 ### Website link
 
-http://dab.com
+https://timathon.herokuapp.com/
 
 This project was created on the ocasion of the code jam known as 
 "Timathon". TelPlanes has the abillty to track your planes and find
