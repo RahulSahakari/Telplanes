@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-import requests, json
+import requests, json, os
 from .forms import *
 
 
@@ -20,7 +20,7 @@ def main(request):
                 'airline_name' : form.cleaned_data['flight_name'],
             }
 
-            url = 'http://api.aviationstack.com/v1/flights?access_key=6ca56f4ac937072abc1f858a7c703668'
+            url = 'http://api.aviationstack.com/v1/flights?access_key={}'.format(os.environ.get('TELPLANES_AIR_KEY'))
             api_result = requests.get(url, params)
             api_data = api_result.json()
 

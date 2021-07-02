@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-import requests, json
+import requests, json, os
 from .forms import HotelsSearchForm, HotelsFilterForm, HotelsSortForm
 from django.contrib import messages
 
@@ -40,7 +40,7 @@ def hotelLists(request):
 			# Calling the api and storing its data in 'api_result'
 
 			headers = {
-			    'x-rapidapi-key': "e272c4ddb1msh83099e81aa634d0p1dda2ejsne0b7bc58b157",
+			    'x-rapidapi-key': os.environ.get('TELPLANES_HOTELS_KEY'),
 			    'x-rapidapi-host': "hotels4.p.rapidapi.com"
 			    }
 
